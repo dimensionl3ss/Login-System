@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+        crossorigin="anonymous"
+      />
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="style-login.css">
+      <title>Log in
+    </title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#">Login System
+              </a>
+              <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                  </ul>
+              </div>
+              <span class="navbar-text">
+                <button class="btn btn-outline-success me-2" onclick="location.href='login.html'">Login
+                </button>
+              </span>  
+          </div>
+      </nav>
+        <div class="container">
+            <h2>Sign In</h2>
+            <form name="form1" class="form-horizontal" action="Login" method="POST">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Email:</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" name="email" placeholder="Enter email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Password:</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password" placeholder="Enter password">
+                  </div>
+                </div>
+                <br>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-danger btn-default" onclick="return verify()">Submit</button>
+                    <label for="new-acc">New user?</label>
+                    <a class="link-primary" style="text-decoration:none" href="register.html">Register</a>
+                  </div>
+                </div>
+              </form>
+        </div>
+        
+    <script>
+            function verify() 
+            {
+                if (document.form1.email.value === "") 
+                {
+                    alert("Please enter your email");
+                    return false;
+                }
+                if(document.form1.password.value==="")
+                {
+                    alert("Please enter your password");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
