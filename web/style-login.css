@@ -1,13 +1,11 @@
 body {
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-image: url("bg.jpg");
+    background-size: 1920px 1080px;
 }
-
 .container {
     padding-top: 20px;
+    color:white;
     width: 400px;
     height: 400px;
     margin: 7em auto;
 }
-    
-    
-

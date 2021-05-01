@@ -19,6 +19,7 @@ pageEncoding="ISO-8859-1"%>
       integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style-login.css">
     <title>Home</title>
   </head>
   <body>
@@ -36,7 +37,7 @@ pageEncoding="ISO-8859-1"%>
         </div>
         <div class="dropdown show">
           <a
-            class="btn btn-default dropdown-toggle"
+            class="btn btn-outline-success dropdown-toggle"
             role="button"
             id="user"
             data-toggle="dropdown"
@@ -52,23 +53,24 @@ pageEncoding="ISO-8859-1"%>
         </div>
       </div>
     </nav>
-
-    <center>
-      <% 
-              String user = null;
-              response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
-              response.setHeader("Progma", "no-cache");
-              response.setHeader("Expires", "0");
-              if (session != null) {
-                  user = session.getAttribute("name").toString();
-                  if (session.getAttribute("name") != null) {
-                      out.print("Hello, " + session.getAttribute("name") + " Welcome to your Profile");
-                  } else {
-                      response.sendRedirect("login.html");
-                  }
-            }else response.sendRedirect("login.html");
-      %>
-    </center>
+    <div class="text-light">
+      <center>
+        <% 
+                String user = null;
+                response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+                response.setHeader("Progma", "no-cache");
+                response.setHeader("Expires", "0");
+                if (session != null) {
+                    user = session.getAttribute("name").toString();
+                    if (session.getAttribute("name") != null) {
+                        out.print("Hello, " + session.getAttribute("name") + " Welcome to your Profile");
+                    } else {
+                        response.sendRedirect("login.html");
+                    }
+              }else response.sendRedirect("login.html");
+        %>
+      </center>
+    </div>
     <script>
       document.getElementById("user").innerHTML = "<%=user %>";
     </script>

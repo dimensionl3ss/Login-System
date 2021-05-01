@@ -1,5 +1,10 @@
+body{
+    background-image: url("bg.jpg");
+    background-size: 1920px 1080px;
+}
 .container{
     padding-left: 56px;
+    color:white;
     padding-right: 10px;
     width: 550px;
     height: 470px;
